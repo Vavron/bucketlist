@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <script src="{{ asset('js/jquery-3.5.1.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+        <link rel="icon" href="{{ asset('img/favicon.png') }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <header id="header"><img src="{{ asset('img/logo.png') }}">
+       <h1 class="titre">BUCKET-LIST</h1></header>
+        <nav><a href="{{ path('main_home') }}" title="Go back home">Accueil</a>
+            <a href="{{ path('wish_list') }}" title="The wish list">The wish-list</a>
+            <a href="{{ path('main_about_us') }}" title="About us">About us</a>
+            <a href="{{ path('wish_detail', {id: 56}) }}" title="Details">Details</a>
+            <a href="{{ path('main_legal_stuff',) }}" title="Legal Stuff">Legal Stuff</a>
+        </nav>
+    <main></main>
+        {% block body %}{% endblock %}
+
+
+
+    <footer id="footer">&copyBucket-List {{ "now"|date("Y") }}</footer>
+    </body>
+</html>

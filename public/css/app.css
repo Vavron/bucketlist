@@ -1,0 +1,26 @@
+* {
+    background-color: yellow;
+}
+
+.titre{
+    display:inline;
+    text-align: center;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+#header{
+    text-align: center;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+}
+
+nav{
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
