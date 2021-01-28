@@ -1,13 +1,13 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-    {{ parent() }} | Details
+    {{ wish.title }} | {{ parent() }}
 {% endblock %}
 
 {% block body %}
-    <h1>@Todo: afficher le nom du wish {{ id }}</h1>
-    {% set idFinal= id %}
-    {{ id }}
+    <h1>{{ wish.title }}</h1>
+    <div class="wish-description">{{ wish.description|nl2br }}</div>
+    <div>Created by {{ wish.author }} on {{ wish.dateCreated|date("Y-m-d") }}</div>
 {% endblock %}
 
 
